@@ -16,10 +16,11 @@ export default async ({ res, req, log, error }) => {
     return res.json({ ok: true });
   }
 
+
   await github.postComment(
     req.body.repository,
     req.body.issue,
-    `Thanks for the issue report @${req.body.issue.user.login}! We will look into it as soon as possible.`
+    `Thank you for helping us improve our project. Someone from our team will respond soon!` //UPDATE THE COMMENT HERE
   );
 
   return res.json({ ok: true });
